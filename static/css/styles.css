@@ -24,15 +24,19 @@
   }
 }
 
+:root {
+    --background: #060608;
+    --color: #FAFAFA;
+}
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
-  color: var(--bs-body-color);
+  color: var(--color);
   text-align: var(--bs-body-text-align);
-  background-color: var(--bs-body-bg);
+  background-color: var(--background);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -9753,18 +9757,46 @@ blockquote {
   letter-spacing: 0.0625em;
 }
 
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: var(--background);
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.col-form-label {
+  padding-top: calc(0.375rem + 1px);
+  padding-bottom: calc(0.375rem + 1px);
+  margin-bottom: 0;
+  font-size: inherit;
+  line-height: 1.5;
+}
+
 .form-floating input,
 .form-floating textarea {
   border-left: 0;
   border-right: 0;
   border-top: 0;
+
 }
 .form-floating input:focus,
 .form-floating textarea:focus {
   box-shadow: none;
+
 }
 .form-floating label {
-  color: #6c757d;
+  color: var(--color);
 }
 
 #mainNav {
