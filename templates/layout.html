@@ -71,9 +71,9 @@
       </div>
     </div>
   </div>
-  <div class="navbar navbar-dark shadow-sm mb-4 mx-auto">
-    <div class="container">
-      <a href="{{ url_for('home') }}" class="navbar-brand d-flex align-items-center">
+  <div class="navbar navbar-dark d-flex  mb-4 ">
+    <div class="container d-flex mix-auto  mt-1">
+      <a href="{{ url_for('home') }}" class="navbar-brand  ">
       <strong class="">WELCOME</strong>
          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" fill="currentColor" class="bi bi-house " viewBox="0 0 16 15" >
             <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
@@ -81,11 +81,11 @@
 
       </a>
       {% block head %}
-      <div class=" mx-auto p-2" style="width: 300px;">
+      <div class="" style="width: 250px;">
         <H3>HELLO THERE!</H3>
       </div>
       {% endblock %}
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="true" aria-label="Toggle navigation">
+      <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="true" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
     </div>
