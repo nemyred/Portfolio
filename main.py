@@ -1,10 +1,11 @@
 import datetime
+import os
 from flask import Flask, abort, render_template, redirect, url_for, flash, request
 from flask_bootstrap import Bootstrap5
 import smtplib
 
 my_email = "ndiwechi1@gmail.com"
-password = "bheunbhoeomikemt"
+password = os.environ.get('PASSWORD')
 
 
 app = Flask(__name__)
@@ -32,7 +33,7 @@ def contact():
             connection.login(my_email, password)
             connection.sendmail(
                 from_addr=email,
-                to_addrs="nemyred1@gmail.com",
+                to_addrs=my_email,
                 msg=f"Subject:New Message\n\nName: {name}\nEmail: {email}\nPhone: {phone}\nMessage:{message}"
             )
         return render_template("contact.html", msg_sent=True)
@@ -40,6 +41,6 @@ def contact():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
 
 
